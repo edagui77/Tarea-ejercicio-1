@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Ejercicio_prueba
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Ejecutarbutton1_Click(object sender, EventArgs e)
+        {
+            int Numero = Convert.ToInt32(IngresotextBox1.Text);
+            if (Numero % 2 == 0 & Numero > 0)
+            {
+               RespuestatextBox2.Text = ("El numero:" + Numero + " es un numero par y positivo ");
+            }
+            else if (Numero % 2 == 0 & Numero < 0)
+            {
+                RespuestatextBox2.Text = ("El numero:" + Numero + " es un numero par y negativo");
+            }
+            else if (Numero % 2 != 0 & Numero > 0)
+            {
+                RespuestatextBox2.Text = ("El numero:" + Numero + " es un numero impar pero positivo");
+            }
+            else if (Numero % 2 != 0 & Numero < 0)
+            {
+                RespuestatextBox2.Text = ("El numero:" + Numero + " es un numero impar pero negativo");
+            }
+        }
+    }
+}
